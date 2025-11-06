@@ -85,4 +85,3 @@ Stack: **React + Vite + TailwindCSS (JS)** · **Framer Motion** · **React Route
 - Migrar a imágenes optimizadas con workers (Cloudflare/Imgix).
 - i18n ES/EN.
 
-> Nota: No puedo abrir issues en GitHub desde aquí, pero este README lista los TODOs para crearlos rápidamente.
