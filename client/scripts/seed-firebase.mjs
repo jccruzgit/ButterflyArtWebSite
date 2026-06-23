@@ -17,37 +17,37 @@ admin.initializeApp({
 const db = admin.firestore()
 
 const categories = [
-  { id: 'amigurimis', name: 'Amigurimis', slug: 'amigurimis', order: 1 },
+  { id: 'amigurumis', name: 'Amigurumis', slug: 'amigurumis', order: 1 },
   { id: 'accesorios', name: 'Accesorios', slug: 'accesorios', order: 2 },
   { id: 'navidad', name: 'Navidad', slug: 'navidad', order: 3 },
-  { id: 'san_valentin', name: 'San Valentín', slug: 'san_valentin', order: 4 }
+  { id: 'san_valentin', name: 'San Valentin', slug: 'san_valentin', order: 4 }
 ]
 
-const products = Array.from({length: 10}, (_, i)=> ({
-  id: `p${i+1}`,
-  title: `Pieza de crochet #${i+1}`,
-  slug: `pieza-${i+1}`,
-  categoryId: i%2===0 ? 'amigurimis' : 'accesorios',
-  description: 'Pieza artesanal tejida a mano. Descripción de ejemplo.',
-  materials: 'Hilo de algodón, relleno sintético',
+const products = Array.from({ length: 10 }, (_, i) => ({
+  id: `p${i + 1}`,
+  title: `Pieza de crochet #${i + 1}`,
+  slug: `pieza-${i + 1}`,
+  categoryId: i % 2 === 0 ? 'amigurumis' : 'accesorios',
+  description: 'Pieza artesanal tejida a mano. Descripcion de ejemplo.',
+  materials: 'Hilo de algodon, relleno sintetico',
   size: '20cm alto aprox.',
-  leadTimeDays: 5 + (i%3),
+  leadTimeDays: 5 + (i % 3),
   priceMin: 20 + i,
   priceMax: 35 + i,
   customizable: true,
   images: [
     { url: `https://picsum.photos/seed/bfa${i}/800/800`, alt: 'Imagen de ejemplo', width: 800, height: 800, variant: 'cover' }
   ],
-  tags: ['hecho-a-mano','crochet'],
+  tags: ['hecho-a-mano', 'crochet'],
   status: 'published',
   createdAt: Date.now(),
   updatedAt: Date.now()
 }))
 
 const testimonials = [
-  { id: 't1', author: 'Ana', text: '¡Trabajo hermoso y detallado!', rating: 5, createdAt: Date.now() },
-  { id: 't2', author: 'Carlos', text: 'Entrega a tiempo y excelente atención.', rating: 5, createdAt: Date.now() },
-  { id: 't3', author: 'María', text: 'Amigurimi precioso, mi hija lo amó.', rating: 5, createdAt: Date.now() },
+  { id: 't1', author: 'Ana', text: 'Trabajo hermoso y detallado!', rating: 5, createdAt: Date.now() },
+  { id: 't2', author: 'Carlos', text: 'Entrega a tiempo y excelente atencion.', rating: 5, createdAt: Date.now() },
+  { id: 't3', author: 'Maria', text: 'Amigurumi precioso, mi hija lo amo.', rating: 5, createdAt: Date.now() }
 ]
 
 async function run() {
@@ -60,7 +60,11 @@ async function run() {
   console.log('Seeding testimonials...')
   for (const t of testimonials) await db.collection('testimonials').doc(t.id).set(t)
 
-  console.log('Done ✅')
+  console.log('Done.')
   process.exit(0)
 }
-run().catch(err=>{ console.error(err); process.exit(1) })
+run().catch((err) => {
+  console.error(err)
+  process.exit(1)
+})
+

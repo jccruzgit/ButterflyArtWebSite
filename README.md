@@ -54,7 +54,7 @@ Stack: **React + Vite + TailwindCSS (JS)** · **Framer Motion** · **React Route
    cd ButterflyArt.sv/client
    npm i
    ```
-2. **Variables**: copia `.env.example` → `.env` y rellena tus valores de Firebase y GA4.
+2. **Variables**: copia `.env.example` + `.env` y rellena tus valores de Firebase y GA4 (`VITE_GA_ID=G-XXXXXXXXXX`).
 3. **Tailwind** ya configurado.
 4. **Firebase**: revisa `/firebase/firestore.rules` y `/firebase/storage.rules` (borrador seguro).
 5. **Dev**:

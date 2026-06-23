@@ -4,14 +4,71 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#a78bfa" />
-    <meta name="description" content="ButterflyArt.sv — Arte de crochet hecho a mano. Amigurimis, accesorios y piezas personalizadas." />
+    <meta name="description" content="ButterflyArt.sv - Arte de crochet hecho a mano. Amigurumis, accesorios y piezas personalizadas." />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:locale" content="es_SV" />
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ButterflyArt.sv" />
+    <meta property="og:title" content="ButterflyArt.sv" />
+    <meta property="og:description" content="Arte de crochet hecho a mano. Amigurumis, accesorios y piezas personalizadas." />
+    <meta property="og:url" content="https://butterflyart.sv/" />
+    <!-- Provide a real 1200x630 JPG at public/og.jpg -->
+    <meta property="og:image" content="/og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="ButterflyArt.sv - Crochet artesanal, amigurumis y accesorios." />
+    <!-- Fallback to SVG for platforms that support it -->
+    <meta property="og:image" content="/og.svg" />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ButterflyArt.sv" />
+    <meta name="twitter:description" content="Arte de crochet hecho a mano. Amigurumis, accesorios y piezas personalizadas." />
+    <meta name="twitter:image" content="/og.jpg" />
+    <meta name="twitter:image:alt" content="ButterflyArt.sv - Crochet artesanal, amigurumis y accesorios." />
+    <link rel="canonical" href="https://butterflyart.sv/" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Marcellus&display=swap" rel="stylesheet">
     <title>ButterflyArt.sv</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "ButterflyArt.sv",
+        "url": "https://butterflyart.sv/",
+        "logo": "https://butterflyart.sv/og.jpg",
+        "sameAs": [
+          "https://www.instagram.com/butterflyart.sv/",
+          "https://wa.me/50300000000"
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "ButterflyArt.sv",
+        "url": "https://butterflyart.sv/",
+        "inLanguage": "es-SV"
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://butterflyart.sv/" },
+          { "@type": "ListItem", "position": 2, "name": "Galeria", "item": "https://butterflyart.sv/gallery" },
+          { "@type": "ListItem", "position": 3, "name": "Pedido personalizado", "item": "https://butterflyart.sv/custom-order" }
+        ]
+      }
+    </script>
   </head>
   <body class="bg-butterfly-50 dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100">
+    <a href="#contenido" class="sr-only focus:not-sr-only focus:outline-none focus:ring-2 focus:ring-butterfly-500 bg-white/90 dark:bg-neutral-900 text-neutral-900 dark:text-white rounded px-3 py-2 absolute left-2 top-2">Saltar al contenido</a>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
-</html>
+  </html>
